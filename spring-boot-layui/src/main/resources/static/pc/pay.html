@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="Content-Type" content="text/html" />
+<title>AIS会员支付</title>
+	<style>
+		*{ margin:0; padding:0; font-weight:normal;}
+		a{text-decoration:none; color:#fff;}
+		ul,li{list-style-type:none;}
+		img{ border:0; vertical-align:middle;}
+		em,i{ font-style:normal;}
+		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,br,pre,form,fieldset,input,textarea,p,blockquote,th,td,img,select,input,a,div,strong,span{ margin: 0;
+		padding: 0; font-weight:normal; }
+		body{ width:100%;font-family:"微软雅黑",Arial; font-size:12px;background: #000; }
+		table {padding: 0;border: 0px;border-collapse: collapse;}
+		/*-----------------*/
+		.main{width: 1160px;margin: 0 auto;background: #2d2d2d;padding-left: 40px;}
+		.top{height: 180px;border-bottom: 2px #363636 solid;width: 1120px;padding-top: 20px;}
+		h5{font-size: 22px;margin-left: 30px;color: #fff;text-align: left;line-height: 40px;}
+		.time{font-size: 20px;color: #ccc;}
+		h6{font-size: 20px;margin-left: 30px;color: #ccc;text-align: left;line-height: 40px;}
+		h2{font-size: 30px;line-height: 120px;width: 800px;margin-left: 30px;color: #2d56e2;text-align: left;}
+		h3{font-size: 26px;line-height: 80px;width: 800px;margin-left: 30px;color: #2d56e2;text-align: left;}
+		p{font-size: 24px;line-height: 30px;margin-left: 30px;text-align: left;color: #fff;}
+		li{float: left;}
+		.line{clear: both;height: 30px;}
+		select{width: 460px;font-size: 22px;text-align: left;line-height: 30px;height: 32px;margin-left:10px;padding-left:6px;}
+		input{width: 450px;font-size: 22px;text-align: left;line-height: 30px;height: 32px;margin-left:10px;padding-left:6px;}
+		span{font-size: 20px;line-height: 30px;color: #efefef;margin-left: 4px;}
+		i{color:red; }
+		 .zhifu{width: 400px;height: 60px;margin-left: 140px;font-size: 26px;text-align: center;background:#2d56e2;border: none;border-radius: 10px;color: #fff;margin-bottom: 100px;margin-top: 20px;}
+		
+		
+		
+		
+		#tab01 { position:relative; width:480px; height:320px; padding-top:15px; overflow:hidden;margin-left: 140px;} 
+		#tab01 h4 { position:relative; z-index:2; float:left; height:20px; padding:0 16px 0 16px;  text-align:center; background:#2d2d2d; cursor:pointer;color: #fff;font-size: 22px;line-height: 30px; height: 30px;} 
+		#tab01 h4.up { background:#2d56e2;color: #fff;height: 30px; } 
+		#tab01 .box1{ display:none; position:absolute; left:0; top:50px; z-index:1; width:460px; height:300px; padding:5px;background: #fff; } 
+		#tab01 .box1.up { display:block; }
+	</style>
+</head>
+
+<body >
+	<div class="main">
+		<div class="top">
+			<h5 style="color: #eee;">当前账号：</h5>
+			<h5 style="padding-left:80px;" id="contact"></h5>
+
+		</div>
+		<h2>购买AIS软件会员项目</h2>
+		<ul>
+			<li><p>选择会员:</p></li>
+			<li>
+				<select id="selectHy">
+
+				</select>
+			</li>	
+		</ul>
+		<div class="line"></div>
+		<ul>
+			<li><p>收费标准:</p></li>
+			<li><input value=""    disabled="disabled"      id="sfbz" /></li>
+		</ul>
+		<div class="line"></div>
+		<ul>
+			<li><p>支付金额:</p></li>
+			<li><input value=""    disabled="disabled"   id="zfje"      /></li>
+		</ul>
+		<div class="line"></div>
+		<div class="line"></div>
+		<ul>
+			<li><p style="margin-left: 78px;">姓名:</p></li>
+			<li><input type="text"     id="name"  /><span>必填</span></li>
+		</ul>
+		<div class="line"></div>
+		<ul>
+			<li><p>手机号码:</p></li>
+			<li><input type="text"    id="phone"   /><span>必填</span></li>
+		</ul>
+		<div class="line"></div>
+		<span style="margin-left: 140px;">手机号码将作为"人工重置密码"的依据,请务必保证 <i>真实、准确</i></span>
+		<div class="line" style="border-bottom: 2px #363636 solid;width: 1120px;"></div>
+		<div class="line" ></div>
+		<div id="tab01"> 
+			<h4>支付宝支付</h4> 
+			<div class="box1">
+				<span style="margin-left: 30px;color: #333;">支付宝账号:</span><input type="text" id="aipay" placeholder="请输入支付宝账号" style="width: 180px;" />
+				<div class="zhifubao" style="width: 220px;height: 220px; padding: 10px; margin-left: 30px;"><img src="images/二维码.jpg" /> </div>
+			</div>
+			<h4></h4>
+			<h4>微信支付</h4> 
+			<div class="box1">
+				<span style="margin-left: 30px;color: #333;">微信账号:</span><input type="text"  id="wechatpay" placeholder="请输入微信号"  style="width: 180px;" />
+				<div class="weixin" style="width: 220px;height: 220px; padding: 10px; margin-left: 30px;"><img src="images/二维码.jpg" /> </div>
+			</div>
+			<h4></h4>
+			<h4>银行卡支付</h4> 
+			<div class="box1">
+				<span style="margin-left: 30px;color: #333;">转账账号:</span><input type="text" id="bankpay"  placeholder="请输入转账账号"  style="width: 180px;" />
+				<p style="line-height: 40px;font-size: 22px;margin-top: 10px;color: #333;">建设银行账号</p>
+				<p style="line-height: 40px;font-size: 22px;color: #333;">开户行：XXXXXXXXXXXXXXXX</p>
+				<p style="line-height: 40px;font-size: 22px;color: #333;">账 号：XXXX XXXX XXXX XXXX XXXX</p>
+				<p style="line-height: 40px;font-size: 22px;color: #333;">开户人：XXXXXXXXXXXX</p>
+			</div> 
+			 
+		</div>
+		<input type="button" value="确认"  class="zhifu" />
+	</div>
+	<script type="text/javascript"> 
+			
+			function Pid(id,tag){ 
+				if(!tag){ 
+					return document.getElementById(id); 
+				} 
+				else{ 
+					return document.getElementById(id).getElementsByTagName(tag); 
+				} 
+			} 
+
+			function tab(id,hx,box,iClass,s,pr){ 
+				var hxs=Pid(id,hx); 
+				var boxs=Pid(id,box); 
+				if(!iClass){ // 如果不指定class，则： 
+					boxsClass=boxs; // 直接使用box作为容器 
+				} 
+				else{ // 如果指定class，则： 
+					var boxsClass = []; 
+					for(i=0;i<boxs.length;i++){ 
+						if(boxs[i].className.match(/\btab\b/)){// 判断容器的class匹配 
+							boxsClass.push(boxs[i]); 
+						} 
+					} 
+				} 
+				if(!pr){ // 如果不指定预展开容器，则： 
+					go_to(0); // 默认展开序列 
+					yy(); 
+				} 
+				else { 
+					go_to(pr); 
+					yy(); 
+				} 
+				function yy(){ 
+					for(var i=0;i<hxs.length;i++){ 
+						hxs[i].temp=i; 
+						if(!s){// 如果不指定事件，则： 
+							s="onmouseover"; // 使用默认事件 
+							hxs[i][s]=function(){ 
+								go_to(this.temp); 
+							} 
+						} 
+						else{ 
+							hxs[i][s]=function(){ 
+								go_to(this.temp); 
+							} 
+						} 
+					} 
+				} 
+				function go_to(pr){ 
+					for(var i=0;i<hxs.length;i++){ 
+						if(!hxs[i].tmpClass){ 
+							hxs[i].tmpClass=hxs[i].className+=" "; 
+							boxsClass[i].tmpClass=boxsClass[i].className+=" "; 
+						} 
+						if(pr==i){ 
+							hxs[i].className+=" up"; // 展开状态：标题 
+							boxsClass[i].className+=" up"; // 展开状态：容器 
+						} 
+						else { 
+							hxs[i].className=hxs[i].tmpClass; 
+							boxsClass[i].className=boxsClass[i].tmpClass; 
+						} 
+					} 
+				} 
+			} 
+			tab("tab01","h4","div","","onclick",2); tab("tab02","h4","ol");tab("tab03","h3","div","tab");
+		</script>
+	    <script src="../js/jquery/jquery-1.9.1.min.js"></script>
+	<script src="pc.js"></script>
+	<script >
+        $.aisPay({
+            online:$.GetQueryString('online')
+        });
+	</script>
+</body>
+</html>

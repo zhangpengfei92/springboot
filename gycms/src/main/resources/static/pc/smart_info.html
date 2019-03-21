@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html><head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>智能资讯</title>
+	<link href="css.css" type="text/css" rel="stylesheet">
+</head>
+
+<body >
+
+<div class="mainbox">
+	<div class="banner"><a href="javascript:void(0)"><img src="images/banner01.png"></a></div>
+	<!--左边的滚动条-->
+
+	<div class="newbox" style="float: left;overflow-x:hidden;" id="leftscroll">
+        <div class="banner" id="pcbanner" >
+            <a href="javascript:void(0)" target="new right">
+                <img src="" width="482px" height="220px"/>
+                <div class="bannerbg">
+                    <h3 class="bannertext"></h3>
+                </div>
+            </a>
+        </div>
+
+		<ul id="pcleft">
+
+		</ul>
+		<div class="pcbind" style="text-align: center"><span style="color:#ffffff;font-size: 1rem;"></span></div>
+	</div>
+	<!--右边的滚动条-->
+
+	<div class="rightbox" style="float: left;margin-left: 10px;" id="rightpc">
+	</div>
+</div>
+<script src="../js/jquery/jquery-1.9.1.min.js"></script>
+<script src="pc.js"></script>
+<script >
+  $.aisPc({
+        url:'/aisintelligentinformation/getList',
+        module:'smart_info',
+        serach:{
+            aisIntelligentinformationType:$.GetQueryString('type')
+        }
+    });
+</script>
+</body></html>

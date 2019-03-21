@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人中心</title>
+<link href="../css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="overflow: hidden;">
+<div id="shade"></div>
+<div class="information">
+	<div>
+		<h2>绑定手机号</h2>
+		<div class="line"></div>
+		<h3>手机号：<i class="phonenumber"></i><i class="state">已绑定</i><a href="#" onClick="shade.style.display='block';xgmm.style.display='block'"><i class="button0">修改</i></a></h3>
+	</div>
+	<div style="padding-top: 20px;">
+		<h2>修改密码</h2>
+		<div class="line"></div>
+		<form>
+			<h3>输入新密码</h3><input class="newpassword newpwd" type="password" maxlength="8"/>
+			<h3 >确认新密码</h3><input class="newpassword renewpwd" type="password" maxlength="8"/><br>
+
+			<a href="#" class="pwdupdate"><input class="ok" type="button" value="提交"/></a>
+		</form>
+	</div>
+	
+	<!--修改密码-->
+	
+	<div id="xgmm">
+		<form>
+			<a href="#" onClick="shade.style.display='none';xgmm.style.display='none'"  class="close">关闭</a><br><br>
+			<h3>输入手机号</h3><input class="newpassword phone" type="text" maxlength="11"/>
+			<h3 >输入验证码</h3><input class="newpassword code" type="text" maxlength="6"/><br>
+			<button id="sendMsg" onclick="return false">获取验证码</button><br>
+			<a href="#" class="bindPhone" ><input class="ok" type="button" value="提交"/></a>
+		</form>
+	</div>
+	
+	<!--重新登录-->
+	<div id="cxdl">
+		<form>
+			<h3>密码已修改，请重新登录</h3>
+			<a href="#" onClick="shade.style.display='none';cxdl.style.display='none'" ><input class="ok" type="button" value="确定"/></a>
+		</form>
+	</div>
+</div>
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script src="../pc.js"></script>
+<script>
+  $.aisCenterUser({
+      online:$.GetQueryString('online')
+  });
+</script>
+</body>
+</html>

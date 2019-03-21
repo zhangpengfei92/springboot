@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>智能投资</title>
+<link href="css.css" type="text/css" rel="stylesheet" />
+	<style>
+      .serachCls{
+		  background-color: #2F4056;
+		  width: 522px;
+	  }
+	   .serachCls li{
+		   font-family: "微软雅黑", Arial;
+		   font-size: 1.2rem;
+		   color:#FFFFFF;
+		   padding-top: 5px;
+		   padding-bottom: 5px;
+		   padding-left: 3px;
+	   }
+
+		.serachCls li:hover{
+			background-color: #9F9F9F;
+			cursor:pointer;
+		}
+	</style>
+</head>
+
+<body style="overflow: hidden;">
+	
+	<div class="bigbg">
+	<div class="searchbox">
+		<div id="wei">
+		<input class="search search-text" placeholder="请输入代码/简称/简拼" id="code" />
+			<input class="button1"  value="智能诊断"  type="button"   />
+		<ul id="list" class="serachCls"></ul></div>
+
+	</div>
+	</div>
+</body>
+<script src="../js/jquery/jquery-1.9.1.min.js"></script>
+<script src="pc.js"></script>
+<script >
+    $.aisDiagnose({
+
+    });
+</script>
+</html>

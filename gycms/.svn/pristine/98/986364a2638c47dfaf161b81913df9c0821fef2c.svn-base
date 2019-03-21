@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html><head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>投资学习</title>
+	<link href="css.css" type="text/css" rel="stylesheet">
+</head>
+
+<body >
+
+<div class="mainbox">
+	<div class="banner"><a href="javascript:void(0)"><img src="images/banner01.png"></a></div>
+	<!--左边的滚动条-->
+	<div class="learnbox" name="learn left" style="float: left; overflow-x:hidden" id="leftscroll">
+		<ul id="pcleft">
+
+		</ul>
+		<div class="pcbind" style="text-align: center"><span style="color:#ffffff;font-size: 1rem;"></span></div>
+	</div>
+	<!--右边的滚动条-->
+	<div class="rightbox" name="learn right" style="float: left;margin-left: 10px;" id="rightpc">
+
+	</div>
+</div>
+<script src="../js/jquery/jquery-1.9.1.min.js"></script>
+<script src="pc.js"></script>
+<script >
+  $.aisPc({
+	  url:'/aisstudylnvestment/getList',
+	  module:'invest_study',
+	  serach:{
+          aisStudylnvestmentType:$.GetQueryString('type')
+	  }
+  });
+</script>
+</body></html>

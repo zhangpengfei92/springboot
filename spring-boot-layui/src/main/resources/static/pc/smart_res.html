@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>搜索结果</title>
+<link href="css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="rightbox result" style="font-family: '微软雅黑';font-size: 1.2rem;color: #ffffff;">
+
+</div>
+
+<script src="../js/jquery/jquery-1.9.1.min.js"></script>
+<script src="pc.js"></script>
+<script>
+  var id=  $.GetQueryString('id');
+  $.post('/serach/getid',{id:id},function(res){
+      $('.result').html(res.aisIntelligentinvestmentText);
+  });
+</script>
+</body>
+</html>

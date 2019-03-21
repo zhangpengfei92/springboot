@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>评测结果</title>
+<link href="../css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="overflow-x: hidden;">
+	<div class="information" style="height: 700px">
+		<div class="hyht">
+			<h2>投资者风险偏好测评</h2>
+			<div class="line"></div>
+			<p class="zhpf"></p>
+			
+		</div>
+	</div>
+	<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+	<script src="../pc.js"></script>
+	<script>
+        $.aisRiskResult({
+            result:$.GetQueryString('result')
+        });
+	</script>
+</body></html>

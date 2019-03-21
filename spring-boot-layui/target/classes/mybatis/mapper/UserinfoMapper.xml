@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jcl.gycms.mapper.UserinfoMapper">
+  <resultMap id="BaseResultMap" type="com.jcl.gycms.entity.Userinfo">
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="INTEGER" />
+    <result column="expiredate" property="expiredate" jdbcType="TIMESTAMP" />
+    <result column="admin" property="admin" jdbcType="INTEGER" />
+    <result column="minver" property="minver" jdbcType="INTEGER" />
+    <result column="lasttime" property="lasttime" jdbcType="TIMESTAMP" />
+    <result column="info" property="info" jdbcType="VARCHAR" />
+    <result column="online" property="online" jdbcType="VARCHAR" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+    <result column="netcard" property="netcard" jdbcType="VARCHAR" />
+    <result column="starttime" property="starttime" jdbcType="TIMESTAMP" />
+    <result column="endtime" property="endtime" jdbcType="TIMESTAMP" />
+    <result column="lastmonth" property="lastmonth" jdbcType="INTEGER" />
+    <result column="huming" property="huming" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="NVARCHAR" />
+    <result column="telephone" property="telephone" jdbcType="NVARCHAR" />
+    <result column="paymoney" property="paymoney" jdbcType="DOUBLE" />
+    <result column="ucname" property="ucname" jdbcType="NVARCHAR" />
+    <result column="paytime" property="paytime" jdbcType="TIMESTAMP" />
+    <result column="seller" property="seller" jdbcType="NVARCHAR" />
+    <result column="funcinfo" property="funcinfo" jdbcType="VARCHAR" />
+    <result column="usertype" property="usertype" jdbcType="INTEGER" />
+    <result column="updatedAt" property="updatedat" jdbcType="TIMESTAMP" />
+    <result column="flag" property="flag" jdbcType="CHAR" />
+    <result column="syncinfo" property="syncinfo" jdbcType="CHAR" />
+    <result column="clientFrom" property="clientfrom" jdbcType="CHAR" />
+    <result column="openid" property="openid" jdbcType="VARCHAR" />
+    <result column="registfrom" property="registfrom" jdbcType="VARCHAR" />
+    <result column="hasmobile" property="hasmobile" jdbcType="INTEGER" />
+    <result column="headPicture" property="headpicture" jdbcType="VARCHAR" />
+    <result column="integration" property="integration" jdbcType="INTEGER" />
+    <result column="Year" property="year" jdbcType="INTEGER" />
+    <result column="Month" property="month" jdbcType="INTEGER" />
+    <result column="Day" property="day" jdbcType="INTEGER" />
+    <result column="City" property="city" jdbcType="VARCHAR" />
+    <result column="Town" property="town" jdbcType="VARCHAR" />
+    <result column="Email" property="email" jdbcType="VARCHAR" />
+    <result column="Phone" property="phone" jdbcType="VARCHAR" />
+    <result column="QQ" property="qq" jdbcType="VARCHAR" />
+    <result column="Education" property="education" jdbcType="VARCHAR" />
+    <result column="Profession" property="profession" jdbcType="VARCHAR" />
+    <result column="ProfessionInfo" property="professioninfo" jdbcType="VARCHAR" />
+    <result column="CapitalPosition" property="capitalposition" jdbcType="VARCHAR" />
+    <result column="OperatingStyle" property="operatingstyle" jdbcType="VARCHAR" />
+    <result column="PickingStyle" property="pickingstyle" jdbcType="VARCHAR" />
+    <result column="InvestingExperience" property="investingexperience" jdbcType="VARCHAR" />
+    <result column="InvestingProducts" property="investingproducts" jdbcType="VARCHAR" />
+    <result column="ruleName" property="rulename" jdbcType="VARCHAR" />
+    <result column="ruleNum" property="rulenum" jdbcType="VARCHAR" />
+    <result column="ruleNum_1" property="rulenum1" jdbcType="VARCHAR" />
+    <result column="ruleNum_2" property="rulenum2" jdbcType="VARCHAR" />
+    <result column="ruleNum_3" property="rulenum3" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>有偿建议</title>
+<link href="../css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="overflow: hidden;">
+<div class="information">
+	<div>
+		
+		<h2>有偿建议</h2>
+		<div class="line"></div>
+		<form>
+			<div class="textwriting"><textarea placeholder="问题描述..."></textarea></div>
+			<input class="ok present" type="button" value="提交"/>
+		</form>
+	</div>
+</div>
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script src="../pc.js"></script>
+<script>
+    $.aisSuggest({
+        online:$.GetQueryString('online')
+    });
+</script>
+</body>
+</html>

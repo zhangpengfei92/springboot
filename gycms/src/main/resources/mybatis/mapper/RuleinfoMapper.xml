@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jcl.gycms.mapper.RuleinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.jcl.gycms.entity.Ruleinfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="ruleNum" property="rulenum" jdbcType="VARCHAR" />
+    <result column="ruleName" property="rulename" jdbcType="VARCHAR" />
+    <result column="regionId" property="regionid" jdbcType="INTEGER" />
+    <result column="ruleNum_1" property="rulenum1" jdbcType="VARCHAR" />
+    <result column="ruleNum_2" property="rulenum2" jdbcType="VARCHAR" />
+    <result column="ruleNum_3" property="rulenum3" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>
